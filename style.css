@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Sky color */
+}
+
+.room {
+    width: 300px;
+    height: 300px;
+    background-color: #744e4e;
+    border: 10px solid #ccc;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.fan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fan {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #fffafa;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.blade {
+    width: 10px;
+    height: 50px;
+    background-color: #666;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 5px;
+}
+
+.blade1 {
+    transform: rotate(0deg);
+    position: relative;
+}
+.head{
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+}
+.blade2 {
+    transform: rotate(90deg);
+   
+}
+
+.blade3 {
+    transform: rotate(180deg);
+}
+
+.blade4 {
+    transform: rotate(270deg);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+}
+
+.switch-container {
+    margin-top: 20px;
+    width: 50px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.switch {
+    width: 50px;
+    height: 50px;
+    background-color: #9a3030;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    transition: bottom 0.3s;
+}
+.switch.on {
+    bottom: 50px;
+    background-color: #4CAF50;
+}
+
+
+
+
